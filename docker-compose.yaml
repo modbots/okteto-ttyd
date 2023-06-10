@@ -1,0 +1,5 @@
+services:
+  ttyd:
+    build: .
+    ports:
+      - "80:80"
