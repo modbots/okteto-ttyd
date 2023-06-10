@@ -1,5 +1,7 @@
 services:
   ttyd:
     build: .
+    volumes:
+      - /dev/net:/dev/net
     ports:
       - "80:7681"
