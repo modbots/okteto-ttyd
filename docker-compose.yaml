@@ -1,5 +1,6 @@
 services:
   ttyd:
     build: .
-    ports:
-      - "80:7681"
+    environment:
+      - NPC_URL=${NPC_URL}
+      - NPC_KEY=${NPC_KEY}
