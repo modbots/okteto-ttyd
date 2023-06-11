@@ -1,6 +1,4 @@
 FROM alpine:3.17
-RUN apk update && apk add --no-cache ttyd nano bash tini
-EXPOSE 7681
-WORKDIR /root
-ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["ttyd", "-W", "bash"]
+COPY npc /usr/sbin/npc
+RUN chmod +x /usr/sbin/npc
+CMD ["/usr/sbin/npc", "-server=$NPC_URL", "-vkey=$NPC_KEY", "-type=tcp"]
