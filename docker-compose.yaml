@@ -1,6 +1,8 @@
 services:
   ttyd:
     build: .
+    volumes:
+      - data:/data
     environment:
       - NPC_URL=${NPC_URL}
       - NPC_KEY=${NPC_KEY}
