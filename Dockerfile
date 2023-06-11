@@ -1,9 +1,9 @@
 FROM alpine:3.17
 WORKDIR /data
-RUN chmod +x /data/entrypoint.sh
+RUN chmod +x ./entrypoint.sh
 
 COPY npc /usr/sbin/npc
 RUN chmod +x /usr/sbin/npc
 
-ENTRYPOINT ["/entrypoint.sh"] 
+ENTRYPOINT ["./entrypoint.sh"] 
 
