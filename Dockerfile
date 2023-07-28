@@ -4,6 +4,6 @@ USER root
 
 COPY entrypoint.sh ./
 COPY npc /usr/sbin/npc
-RUN chmod +x ./entrypoint.sh /usr/sbin/npc
+RUN chmod +x entrypoint.sh /usr/sbin/npc
 
 ENTRYPOINT ["./entrypoint.sh"] 
